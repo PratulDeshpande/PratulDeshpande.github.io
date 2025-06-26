@@ -28,40 +28,52 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Detect mobile devices and handle video background
 document.addEventListener('DOMContentLoaded', function() {
     var video = document.getElementById('bg-video');
-    var videoBackground = document.getElementById('video-background');
     
-    // Check if mobile device
-    function isMobile() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // Required for iOS
+    video.playsInline = true;
+    video.muted = true;
+    video.setAttribute('muted', '');
+    
+    // Try to play video (required for some mobile browsers)
+    var playPromise = video.play();
+    
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            // Auto-play was prevented
+            // Show play button or fallback silently
+            console.log('Auto-play prevented:', error);
+            
+            // Attempt to play on user interaction
+            function tryPlay() {
+                video.play()
+                    .then(() => {
+                        // Success! Remove listeners
+                        document.removeEventListener('click', tryPlay);
+                        document.removeEventListener('touchstart', tryPlay);
+                    })
+                    .catch(e => {
+                        console.log('Still cannot play:', e);
+                    });
+            }
+            
+            // Try to play on any user interaction
+            document.addEventListener('click', tryPlay);
+            document.addEventListener('touchstart', tryPlay);
+        });
     }
     
-    if (!isMobile()) {
-        // Desktop - try to play video
-        var promise = video.play();
-        
-        if (promise !== undefined) {
-            promise.catch(error => {
-                // Video play failed, fallback to image
-                video.style.display = 'none';
-                videoBackground.style.backgroundImage = 'url(images/bg.jpg)';
-            });
-        }
-    } else {
-        // Mobile - use image background
-        video.style.display = 'none';
-        videoBackground.style.backgroundImage = 'url(images/bg.jpg)';
-    }
-    
-    // Optional: Reload video when page becomes visible (for mobile)
+    // Fix for iOS - reload video when page becomes visible
     document.addEventListener('visibilitychange', function() {
-        if (!document.hidden && !isMobile()) {
-            video.play().catch(error => {
-                video.style.display = 'none';
-            });
+        if (!document.hidden) {
+            video.play().catch(e => console.log('Visibility change play failed:', e));
         }
+    });
+    
+    // Fix for some Android devices
+    window.addEventListener('load', function() {
+        video.play().catch(e => console.log('Window load play failed:', e));
     });
 });
 
