@@ -126,14 +126,15 @@ input, select, textarea {
 /* Video Background Styles */
 #video-background {
     position: fixed;
+    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     z-index: -100;
-    background: lab(14.06% 3.04 -10.28); /* Fallback color */
+    overflow: hidden;
+    background: #2e3141; /* Fallback color */
 }
 
 #bg-video {
@@ -146,31 +147,24 @@ input, select, textarea {
     height: auto;
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
-    opacity: 0.6; /* Adjust opacity as needed */
+    opacity: 0.3;
 }
 
-/* Adjust wrapper backgrounds to be transparent */
-.wrapper {
-    background-color: rgba(46, 49, 65, 0.8) !important; /* Semi-transparent version of your original color */
+#video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 49, 65, 0.3);
 }
 
-/* Remove the before/after triangle effects or make them transparent */
-.wrapper:before, 
-.wrapper:after {
-    background-image: none !important;
-    box-shadow: none !important;
-}
-
-
-/* Mobile-specific styles 
-@media screen and (max-width: 480px) {
+/* Mobile-specific adjustments */
+@media screen and (max-width: 736px) {
     #bg-video {
-        display: none; /* Hide video on mobile by default
+        /* Mobile-specific sizing if needed */
     }
-    
-   
 }
-*/
 
 
 
