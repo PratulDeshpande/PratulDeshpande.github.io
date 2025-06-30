@@ -116,13 +116,6 @@ input, select, textarea {
 		}
 
 
-
-
-
-		
-
-
-
 /* Video Background Styles */
 #video-background {
     position: fixed;
@@ -147,7 +140,7 @@ input, select, textarea {
     height: auto;
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 #video-overlay {
@@ -156,20 +149,13 @@ input, select, textarea {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(46, 49, 65, 0.3);
+    background-color: rgba(46, 49, 65, 0.231);
 }
 
 /* Mobile-specific adjustments */
 @media screen and (max-width: 736px) {
-    #bg-video {
-        /* Mobile-specific sizing if needed */
-    }
+	/* Add mobile-specific #bg-video styles here if needed */
 }
-
-
-
-
-
 
 
 
@@ -219,6 +205,72 @@ input, select, textarea {
 	}
 
 	@media screen and (max-width: 480px) {
+		.section-gap {
+			margin: 3em 0;
+		}
+		
+		.section-gap-small {
+			margin: 5em 0;
+		}
+		
+		.section-gap-medium {
+			margin: 10em 0;
+		}
+		
+		.section-gap-large {
+			margin: 15em 0;
+		}
+		
+		.section-gap-xlarge {
+			margin: 20em 0;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+		.section-gap {
+			margin: 3em 0;
+		}
+		
+		.section-gap-small {
+			margin: 5em 0;
+		}
+		
+		.section-gap-medium {
+			margin: 10em 0;
+		}
+		
+		.section-gap-large {
+			margin: 15em 0;
+		}
+		
+		.section-gap-xlarge {
+			margin: 20em 0;
+		}
+	}
+
+	@media screen and (max-width: 980px) {
+		.section-gap {
+			margin: 3em 0;
+		}
+		
+		.section-gap-small {
+			margin: 5em 0;
+		}
+		
+		.section-gap-medium {
+			margin: 10em 0;
+		}
+		
+		.section-gap-large {
+			margin: 15em 0;
+		}
+		
+		.section-gap-xlarge {
+			margin: 20em 0;
+		}
+	}
+
+	@media screen and (max-width: 980px) {
 		.section-gap {
 			margin: 3em 0;
 		}
@@ -3288,6 +3340,18 @@ html {
 		}
 
 		@media screen and (max-width: 480px) {
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button,
+			.button {
+				padding: 0;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
 
 			input[type="submit"],
 			input[type="reset"],
