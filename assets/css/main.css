@@ -154,7 +154,17 @@ input, select, textarea {
 
 /* Mobile-specific adjustments */
 @media screen and (max-width: 736px) {
-	/* Add mobile-specific #bg-video styles here if needed */
+	#bg-video {
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	#video-overlay {
+		background-color: rgba(46, 49, 65, 0.231);
+	}
 }
 
 
@@ -270,28 +280,6 @@ input, select, textarea {
 		}
 	}
 
-	@media screen and (max-width: 980px) {
-		.section-gap {
-			margin: 3em 0;
-		}
-		
-		.section-gap-small {
-			margin: 5em 0;
-		}
-		
-		.section-gap-medium {
-			margin: 10em 0;
-		}
-		
-		.section-gap-large {
-			margin: 15em 0;
-		}
-		
-		.section-gap-xlarge {
-			margin: 20em 0;
-		}
-	}
-
 
 	@media screen and (max-width: 1280px) {
 		.section-gap {
@@ -353,9 +341,27 @@ input, select, textarea {
     width: calc(100% + 2em) !important;
 }
 
+@media screen and (max-width: 1680px) {
+    .features.small article {
+        width: calc(25% - 1em);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .features.small article {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 980px) {
     .features.small article {
-        width: calc(50% - 1em);
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .features.small article {
+        width: 100%;
     }
 }
 
@@ -370,8 +376,6 @@ input, select, textarea {
         width: 100%;
     }
 }
-
-
 
 
 
@@ -387,20 +391,38 @@ input, select, textarea {
     width: calc(100% + 2em) !important;
 }
 
-@media screen and (max-width: 980px) {
-    .features.medium article {
+@media screen and (max-width: 1680px) {
+    .features.small article {
         width: calc(50% - 1em);
     }
 }
 
+@media screen and (max-width: 1280px) {
+    .features.small article {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .features.small article {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .features.small article {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 480px) {
-    .features.medium article {
+    .features.small article {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 360px) {
-    .features.medium article {
+    .features.small article {
         width: 100%;
     }
 }
@@ -3339,6 +3361,26 @@ html {
 			opacity: 0.25;
 		}
 
+		@media screen and (max-width: 360px) {
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button,
+			.button {
+				padding: 0;
+			}
+
+			input[type="submit"].fit,
+			input[type="reset"].fit,
+			input[type="button"].fit,
+			button.fit,
+			.button.fit {
+			width: 100%;
+		}
+
+		}
+
 		@media screen and (max-width: 480px) {
 
 			input[type="submit"],
@@ -3348,6 +3390,14 @@ html {
 			.button {
 				padding: 0;
 			}
+
+			input[type="submit"].fit,
+			input[type="reset"].fit,
+			input[type="button"].fit,
+			button.fit,
+			.button.fit {
+			width: 100%;
+		}
 
 		}
 
@@ -3360,8 +3410,77 @@ html {
 			.button {
 				padding: 0;
 			}
+			
+			input[type="submit"].fit,
+			input[type="reset"].fit,
+			input[type="button"].fit,
+			button.fit,
+			.button.fit {
+			width: 50%;
+		}
+		}
+
+		@media screen and (max-width: 980px) {
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button,
+			.button {
+				padding: 0;
+			}
+
+			input[type="submit"].fit,
+			input[type="reset"].fit,
+			input[type="button"].fit,
+			button.fit,
+			.button.fit {
+			width: 100%;
+		}
 
 		}
+
+		@media screen and (max-width: 1280px) {
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button,
+			.button {
+				padding: 0;
+			}
+
+			input[type="submit"].fit,
+			input[type="reset"].fit,
+			input[type="button"].fit,
+			button.fit,
+			.button.fit {
+			width: 100%;
+		}
+
+		}
+
+		@media screen and (max-width: 1680px) {
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button,
+			.button {
+				padding: 0;
+			}
+
+			input[type="submit"].fit,
+			input[type="reset"].fit,
+			input[type="button"].fit,
+			button.fit,
+			.button.fit {
+			width: 100%;
+		}
+
+		}
+
+
 
 /* Features */
 
