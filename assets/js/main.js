@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
         video.play().catch(function(error) {
             // Autoplay was prevented, show fallback
-            document.getElementById('video-background').style.backgroundImage = 'url(images/bg.jpg)';
-            video.style.display = 'none';
+            //document.getElementById('video-background').style.backgroundImage = 'url(images/bg.jpg)';
+            //video.style.display = 'none';
         });
     } catch(e) {
         // Fallback if video fails entirely
-        document.getElementById('video-background').style.backgroundImage = 'url(images/bg.jpg)';
-        video.style.display = 'none';
+        //document.getElementById('video-background').style.backgroundImage = 'url(images/bg.jpg)';
+        //video.style.display = 'none';
     }
 });
 
