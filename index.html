@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- REMOVED: Default Vite SVG link to avoid confusion -->
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+
+    <!-- FAVICON: Corrected for Google Search & Browser Compatibility -->
+    <!-- Google prefers a square icon, ideally 48x48 or multiples (96x96, 144x144, etc.) -->
+    <!-- Using "sizes='any'" for .ico is a standard practice -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    
+    <!-- SVG is excellent for modern browsers and scales infinitely -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    
+    <!-- Apple Touch Icon is used by iOS and also looked at by Google -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratul Deshpande | Portfolio</title>
+
+    <!-- Google Analytics (gtag.js) -->
+    <!-- IMPORTANT: Replace G-XXXXXXXXXX below with your actual ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DW0EZH4G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-30DW0EZH4G');
+    </script>
+    <!-- End Google Analytics -->
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- This line below is the most important part. It tells Vite to look at your source code. -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
