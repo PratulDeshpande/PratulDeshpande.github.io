@@ -2,21 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <!-- FAVICON: Multi-Format Cache-Busting -->
-    <!-- 1. Default ICO link with Cache Busting query parameter -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=1.0.1" />
-    <!-- 2. Standard PNG link (Best for modern browsers) -->
-    <link rel="icon" type="image/png" href="/favicon.ico?v=1.0.1" />
-    <!-- 3. Apple Touch Icon (For mobile home screen shortcuts) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico?v=1.0.1"> 
+    <!-- REMOVED: Default Vite SVG link to avoid confusion -->
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+
+    <!-- FAVICON: Corrected for Google Search & Browser Compatibility -->
+    <!-- Google prefers a square icon, ideally 48x48 or multiples (96x96, 144x144, etc.) -->
+    <!-- Using "sizes='any'" for .ico is a standard practice -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    
+    <!-- SVG is excellent for modern browsers and scales infinitely -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    
+    <!-- Apple Touch Icon is used by iOS and also looked at by Google -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pratul Deshpande | Portfolio</title>
 
     <!-- Google Analytics (gtag.js) -->
     <!-- IMPORTANT: Replace G-XXXXXXXXXX below with your actual ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DW0EZH4G
-"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DW0EZH4G"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -26,7 +31,7 @@
     </script>
     <!-- End Google Analytics -->
 
-    <script type="module" crossorigin src="/assets/index-DUylSDST.js"></script>
+    <script type="module" crossorigin src="/assets/index-BXQECRYe.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-CeOKB-CM.js">
     <link rel="stylesheet" crossorigin href="/assets/index-Dp3zZSas.css">
   </head>
