@@ -13,6 +13,7 @@ import{r as l,a as q,m as h,C as T,A as M,B as V,b as O,c as U,G as F,d as $,M a
     3. NO fluff. Get straight to the point.
     4. If asked for resume: [Download Resume](/assets/resume.pdf)
     5. If answering about projects, use format: [Project Name](link)
+    6. If the question is unrelated to Pratul, politely decline to answer.
     DATA:
     ${JSON.stringify(x)}
     ${JSON.stringify(ce)}
