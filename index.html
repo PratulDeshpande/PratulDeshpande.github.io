@@ -2,25 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- REMOVED: Default Vite SVG link to avoid confusion -->
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- PRIMARY SEO -->
+    <title>Pratul Deshpande | Portfolio</title>
+    <meta name="description" content="Portfolio of Pratul Deshpande - E&Tc undergraduate specializing in Embedded Systems, Python, UDS, and Quantum Computing." />
+    <meta name="author" content="Pratul Deshpande" />
+    <meta name="keywords" content="Pratul Deshpande Website, Pratul Deshpande, Embedded Systems, Portfolio, Software Developer, Quantum Computing, Python, React" />
 
-    <!-- FAVICON: Corrected for Google Search & Browser Compatibility -->
-    <!-- Google prefers a square icon, ideally 48x48 or multiples (96x96, 144x144, etc.) -->
-    <!-- Using "sizes='any'" for .ico is a standard practice -->
+    <!-- FAVICONS (Google Search Icon) -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    
-    <!-- SVG is excellent for modern browsers and scales infinitely -->
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    
-    <!-- Apple Touch Icon is used by iOS and also looked at by Google -->
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pratul Deshpande | Portfolio</title>
+    <!-- OPEN GRAPH / SOCIAL MEDIA (WhatsApp, LinkedIn, Twitter Preview) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pratuldeshpande.com/" />
+    <meta property="og:title" content="Pratul Deshpande | Portfolio" />
+    <meta property="og:description" content="Embedded Systems & Software Developer. Explore my projects in Python, UDS, and Quantum Computing." />
+    <!-- Ensure you have an image named 'og-image.png' (1200x630px) in your public folder -->
+    <meta property="og:image" content="https://pratuldeshpande.com/og-image.png" />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://pratuldeshpande.com/" />
+    <meta name="twitter:title" content="Pratul Deshpande | Portfolio" />
+    <meta name="twitter:description" content="Embedded Systems & Software Developer. Explore my projects." />
+    <meta name="twitter:image" content="https://pratuldeshpande.com/og-image.png" />
+
+    <!-- MOBILE THEME COLOR (The 'Posh' Browser Bar Color) -->
+    <!-- Matches your site's dark background -->
+    <meta name="theme-color" content="#050505" />
+
+    <!-- DEVICON: Added for high-quality tech icons in the marquee -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <!-- Google Analytics (gtag.js) -->
-    <!-- IMPORTANT: Replace G-XXXXXXXXXX below with your actual ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DW0EZH4G"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -29,12 +46,9 @@
 
       gtag('config', 'G-30DW0EZH4G');
     </script>
-    <!-- End Google Analytics -->
-
   </head>
   <body>
     <div id="root"></div>
-    <!-- This line below is the most important part. It tells Vite to look at your source code. -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
